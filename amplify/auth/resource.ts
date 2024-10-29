@@ -12,7 +12,9 @@ import { verifyAuthChallengeResponse } from "./verify-auth-challenge-response/re
 
 
 export const auth = defineAuth({
+  name: "com.dotebaby",
   loginWith: {
+    
    email: {
      // can be used in conjunction with a customized welcome email as well
      verificationEmailStyle: "CODE",
