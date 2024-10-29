@@ -12,7 +12,7 @@ import { verifyAuthChallengeResponse } from "./verify-auth-challenge-response/re
 
 
 export const auth = defineAuth({
-  name: "com.dotebaby",
+  name: "dotebaby_user_pool",
   loginWith: {
     
    email: {
