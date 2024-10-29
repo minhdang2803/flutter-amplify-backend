@@ -1,0 +1,1 @@
+export './src/amplify_outputs.dart';
