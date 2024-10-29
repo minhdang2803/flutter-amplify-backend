@@ -24,6 +24,8 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "aws-amplify": "^6.6.7"
+    "aws-amplify": "^6.6.7",
+    "aws-sdk": "^2.1691.0",
+    "crypto-secure-random-digit": "^1.0.10"
   }
 }
