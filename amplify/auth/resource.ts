@@ -21,33 +21,26 @@ export const auth = defineAuth({
           `We're happy to have you! You can now login with username ${user()} and temporary password ${code()}`, 
       },
     },
-        externalProviders: {
-        google: {
-          clientId: secret('googleClientIdDemo'),
-          clientSecret: secret('googleClientSecretDemo'),        
-          attributeMapping: {
-            email: 'email'
-          },
-          scopes: ['email']
-        },
-          
-      // signInWithApple: {
-      //   clientId: secret('SIWA_CLIENT_ID'),
-      //   keyId: secret('SIWA_KEY_ID'),
-      //   privateKey: secret('SIWA_PRIVATE_KEY'),
-      //   teamId: secret('SIWA_TEAM_ID')
-      // },
-      // loginWithAmazon: {
-      //   clientId: secret('LOGINWITHAMAZON_CLIENT_ID'),
-      //   clientSecret: secret('LOGINWITHAMAZON_CLIENT_SECRET')
-      // },
-      // facebook: {
-      //   clientId: secret('FACEBOOK_CLIENT_ID'),
-      //   clientSecret: secret('FACEBOOK_CLIENT_SECRET')
-      // },
+    externalProviders: {
+    google: {
+      clientId: secret('googleClientIdDemo'),
+      clientSecret: secret('googleClientSecretDemo'),        
+      attributeMapping: {
+        email: 'email'
+      },
+      scopes: ['email']
+    },
+        
+    // signInWithApple: {
+    //   clientId: secret('SIWA_CLIENT_ID'),
+    //   keyId: secret('SIWA_KEY_ID'),
+    //   privateKey: secret('SIWA_PRIVATE_KEY'),
+    //   teamId: secret('SIWA_TEAM_ID')
+    // },
       callbackUrls: ["dotebaby://meDoteBaby.com/"],
-      logoutUrls: ["dotebaby://meDoteBaby.com/"],
-        }
+    logoutUrls: [],
+    // logoutUrls: ["dotebaby://meDoteBaby.com/"],
+    }
   },
   triggers: {
     createAuthChallenge:createAuthChallenge,
