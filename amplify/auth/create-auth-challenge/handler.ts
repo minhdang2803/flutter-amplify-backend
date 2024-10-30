@@ -1,9 +1,10 @@
 import type { CreateAuthChallengeTriggerHandler } from "aws-lambda";
 
 export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
+  console.log(`CURRENT CHALLANGE: ${event.request.challengeName}`);
   if (event.request.challengeName === "CUSTOM_CHALLENGE") {
     
-    const digitGenerator = require('crypto-secure-random-digit');
+    const digitGenerator = require('crypto-secure-random-digit');    
     
     let challengeCode = digitGenerator.randomDigits(6).join("");
     console.log(`Create: go here: ${challengeCode}`)
@@ -18,7 +19,6 @@ export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
     event.response.privateChallengeParameters = { trigger: "true" };
     event.response.privateChallengeParameters.answer = challengeCode;
   }
-  
   return event;
 };
 
