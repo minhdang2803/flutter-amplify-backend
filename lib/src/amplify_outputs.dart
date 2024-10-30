@@ -1,9 +1,9 @@
 const amplifyConfig = '''{
   "auth": {
-    "user_pool_id": "ap-southeast-1_0Zuc2v1rT",
+    "user_pool_id": "ap-southeast-1_S9OzkgYvG",
     "aws_region": "ap-southeast-1",
-    "user_pool_client_id": "1f9bajs5ihi34hkkic4uuuli99",
-    "identity_pool_id": "ap-southeast-1:9b846a70-1ac2-49c4-a0ed-beb994a6d335",
+    "user_pool_client_id": "6upoa7ot7r3chvlid2t8c8o52m",
+    "identity_pool_id": "ap-southeast-1:f1caac0c-ea8a-4876-a4c7-8cf283c016d2",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -28,10 +28,10 @@ const amplifyConfig = '''{
         "GOOGLE"
       ],
       "redirect_sign_in_uri": [
-        "myapp://callback/"
+        "dotebaby://meDoteBaby.com/"
       ],
       "redirect_sign_out_uri": [
-        "myapp://signout/"
+        "dotebaby://meDoteBaby.com/"
       ],
       "response_type": "code",
       "scopes": [
@@ -41,7 +41,7 @@ const amplifyConfig = '''{
         "profile",
         "aws.cognito.signin.user.admin"
       ],
-      "domain": "bd393b3c04c218090a07.auth.ap-southeast-1.amazoncognito.com"
+      "domain": "486a14fc9ecb0032e67f.auth.ap-southeast-1.amazoncognito.com"
     },
     "unauthenticated_identities_enabled": true
   },
