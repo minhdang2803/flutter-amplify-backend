@@ -2,6 +2,7 @@ import { defineAuth, secret } from '@aws-amplify/backend';
 import { createAuthChallenge } from "./create-auth-challenge/resource"
 import { defineAuthChallenge } from "./define-auth-challenge/resource"
 import { verifyAuthChallengeResponse } from "./verify-auth-challenge-response/resource"
+import { preSignUpTrigger } from './pre-sign-up-trigger/handler';
 /**
  * Define and configure your auth resource
  * @see https://docs.amplify.aws/gen2/build-a-backend/auth
@@ -54,9 +55,10 @@ export const auth = defineAuth({
       logoutUrls: ["myapp://signout/"],
         }
   },
-   triggers: {
-    createAuthChallenge,
-    defineAuthChallenge,
-    verifyAuthChallengeResponse,
+  triggers: {
+    createAuthChallenge:createAuthChallenge,
+    defineAuthChallenge:defineAuthChallenge,
+    verifyAuthChallengeResponse:verifyAuthChallengeResponse,
+    preSignUp: preSignUpTrigger
   },
 });
