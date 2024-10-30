@@ -23,8 +23,8 @@ export const auth = defineAuth({
     },
         externalProviders: {
         google: {
-          clientId: secret('googleClientId'),
-          clientSecret: secret('googleClientSecret'),        
+          clientId: secret('googleClientIdDemo'),
+          clientSecret: secret('googleClientSecretDemo'),        
           attributeMapping: {
             email: 'email'
           },
