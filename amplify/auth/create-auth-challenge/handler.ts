@@ -1,6 +1,7 @@
 import type { CreateAuthChallengeTriggerHandler } from "aws-lambda";
 
 export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
+  throw "Error";
   console.log(`CURRENT CHALLANGE: ${event.request.challengeName}`);
   if (event.request.challengeName === "CUSTOM_CHALLENGE") {
     
