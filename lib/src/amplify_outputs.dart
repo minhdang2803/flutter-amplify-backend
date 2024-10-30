@@ -31,7 +31,7 @@ const amplifyConfig = '''{
         "dotebaby://meDoteBaby.com/"
       ],
       "redirect_sign_out_uri": [
-        "dotebaby://meDoteBaby.com/"
+        "dotebaby://"
       ],
       "response_type": "code",
       "scopes": [
