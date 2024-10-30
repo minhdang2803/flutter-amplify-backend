@@ -45,8 +45,8 @@ export const auth = defineAuth({
       //   clientId: secret('FACEBOOK_CLIENT_ID'),
       //   clientSecret: secret('FACEBOOK_CLIENT_SECRET')
       // },
-      callbackUrls: ["myapp://callback/"],
-      logoutUrls: ["myapp://signout/"],
+      callbackUrls: ["dotebaby://meDoteBaby.com/"],
+      logoutUrls: ["dotebaby://meDoteBaby.com/"],
         }
   },
   triggers: {
