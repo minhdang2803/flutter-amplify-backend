@@ -38,7 +38,7 @@ export const auth = defineAuth({
     //   teamId: secret('SIWA_TEAM_ID')
     // },
       callbackUrls: ["dotebaby://meDoteBaby.com/"],
-    logoutUrls: ["dotebaby://"],
+    logoutUrls: ["dotebaby://meDoteBaby.com/"],
     // logoutUrls: ["dotebaby://meDoteBaby.com/"],
     }
   },
