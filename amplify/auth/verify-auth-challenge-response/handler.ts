@@ -8,7 +8,8 @@ export const handler: VerifyAuthChallengeResponseTriggerHandler = async (event) 
   //   event.response.answerCorrect = false;
   // }
   // return event;
-    const expectedAnswer = event.request.privateChallengeParameters!.secretLoginCode; 
+  const expectedAnswer = event.request.privateChallengeParameters!.secretLoginCode; 
+  console.log(`Verify expected answer: ${expectedAnswer}`) 
     if (event.request.challengeAnswer === expectedAnswer) {
         event.response.answerCorrect = true;
     } else {

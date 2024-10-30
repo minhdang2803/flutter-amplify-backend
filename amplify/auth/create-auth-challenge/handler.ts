@@ -25,7 +25,7 @@ export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
 
     let secretLoginCode: string;
     if (!event.request.session || !event.request.session.length) {
-
+      console.log("Create case 1:")
         // This is a new auth session
       // Generate a new secret login code and mail it to the user
         const digitGenerator = require('crypto-secure-random-digit');
@@ -39,7 +39,8 @@ export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
         // make a mistake when keying in the code and to then retry, rather
         // the needing to e-mail the user an all new code again.    
         const previousChallenge = event.request.session.slice(-1)[0];
-        secretLoginCode = previousChallenge.challengeMetadata!.match(/CODE-(\d*)/)![1];
+      secretLoginCode = previousChallenge.challengeMetadata!.match(/CODE-(\d*)/)![1];
+      console.log(`Create case 2: secret code ${secretLoginCode}`)
     }
 
     // This is sent back to the client app
@@ -53,7 +54,8 @@ export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
 
     // Add the secret login code to the session so it is available
     // in a next invocation of the "Create Auth Challenge" trigger
-    event.response.challengeMetadata = `CODE-${secretLoginCode}`;
+  event.response.challengeMetadata = `CODE-${secretLoginCode}`;
+  console.log(`Create response ${event.response.challengeMetadata}`)
 
     return event;
 };
