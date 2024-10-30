@@ -1,7 +1,5 @@
-import { PreSignUpTriggerHandler } from 'aws-lambda'
+import { defineFunction } from "@aws-amplify/backend";
 
-export const handler: PreSignUpTriggerHandler = async (event) => {
-    event.response.autoConfirmUser = true;
-    event.response.autoVerifyEmail = true;
-    return event;
-}
+export const preSignUpTrigger = defineFunction({
+  name: "pre-sign-up-trigger",
+})
