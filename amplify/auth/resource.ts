@@ -22,21 +22,20 @@ export const auth = defineAuth({
       },
     },
     externalProviders: {
-    google: {
-      clientId: secret('googleClientIdDemo'),
-      clientSecret: secret('googleClientSecretDemo'),        
-      attributeMapping: {
-        email: 'email'
+      google: {
+        clientId: secret('googleClientIdDemo'),
+        clientSecret: secret('googleClientSecretDemo'),
+        attributeMapping: {
+          email: 'email'
+        },
+        scopes: ['email']
       },
-      scopes: ['email']
-    },
-        
-    // signInWithApple: {
-    //   clientId: secret('SIWA_CLIENT_ID'),
-    //   keyId: secret('SIWA_KEY_ID'),
-    //   privateKey: secret('SIWA_PRIVATE_KEY'),
-    //   teamId: secret('SIWA_TEAM_ID')
-    // },
+      signInWithApple: {
+        clientId: secret('appleClientIdDemo'),
+        keyId: secret('appleKeyIdDemo'),
+        privateKey: secret('applePrivateKeyDemo'),
+        teamId: secret('appleTeamIdDemo')
+      },
       callbackUrls: ["dotebaby://meDoteBaby.com/"],
     logoutUrls: ["dotebaby://meDoteBaby.com/"],
     // logoutUrls: ["dotebaby://meDoteBaby.com/"],
