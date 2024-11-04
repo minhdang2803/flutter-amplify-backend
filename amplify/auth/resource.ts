@@ -36,8 +36,8 @@ export const auth = defineAuth({
         privateKey: secret('applePrivateKeyDemo'),
         teamId: secret('appleTeamIdDemo')
       },
-      callbackUrls: ["dotebaby://meDoteBaby.com/"],
-    logoutUrls: ["dotebaby://meDoteBaby.com/"],
+      callbackUrls: ["dotebaby://medotebaby.com/"],
+    logoutUrls: ["dotebaby://medotebaby.com/"],
     // logoutUrls: ["dotebaby://meDoteBaby.com/"],
     }
   },
