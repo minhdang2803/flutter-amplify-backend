@@ -1,9 +1,9 @@
 const amplifyConfig = '''{
   "auth": {
-    "user_pool_id": "ap-southeast-1_S9OzkgYvG",
+    "user_pool_id": "ap-southeast-1_1Nv3F8vAf",
     "aws_region": "ap-southeast-1",
-    "user_pool_client_id": "6upoa7ot7r3chvlid2t8c8o52m",
-    "identity_pool_id": "ap-southeast-1:f1caac0c-ea8a-4876-a4c7-8cf283c016d2",
+    "user_pool_client_id": "ejea0vj2pg29grve3ce92g0bt",
+    "identity_pool_id": "ap-southeast-1:60ca91de-f6f6-4883-bb14-4c19d61799a4",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -25,13 +25,14 @@ const amplifyConfig = '''{
     },
     "oauth": {
       "identity_providers": [
-        "GOOGLE"
+        "GOOGLE",
+        "SIGN_IN_WITH_APPLE"
       ],
       "redirect_sign_in_uri": [
-        "dotebaby://meDoteBaby.com/"
+        "dotebaby://medotebaby.com/"
       ],
       "redirect_sign_out_uri": [
-        "dotebaby://"
+        "dotebaby://medotebaby.com/"
       ],
       "response_type": "code",
       "scopes": [
@@ -41,7 +42,7 @@ const amplifyConfig = '''{
         "profile",
         "aws.cognito.signin.user.admin"
       ],
-      "domain": "486a14fc9ecb0032e67f.auth.ap-southeast-1.amazoncognito.com"
+      "domain": "da75119ca542b52535c6.auth.ap-southeast-1.amazoncognito.com"
     },
     "unauthenticated_identities_enabled": true
   },
