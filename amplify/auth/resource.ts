@@ -25,10 +25,6 @@ export const auth = defineAuth({
       google: {
         clientId: secret('googleClientIdDemo'),
         clientSecret: secret('googleClientSecretDemo'),
-        attributeMapping: {
-          email: 'email'
-        },
-        scopes: ['email']
       },
       signInWithApple: {
         clientId: secret('appleClientIdDemo'),
