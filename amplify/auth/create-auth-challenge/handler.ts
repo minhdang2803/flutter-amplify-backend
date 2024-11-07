@@ -25,7 +25,7 @@ export const handler: CreateAuthChallengeTriggerHandler = async (event) => {
 
 async function sendChallengeCode(emailAddress: string, secretCode: string) {
   let aws = require("aws-sdk");
-  let ses = new aws.SES({ region: "ap-southeast-1" });
+  let ses = new aws.SES({ region: "eu-west-2" });
   var params = {
     Destination: {
       ToAddresses: [emailAddress],
